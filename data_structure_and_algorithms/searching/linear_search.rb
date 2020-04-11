@@ -19,8 +19,10 @@ target = 13
 index = linear_search(target, array)
 
 puts "Target #{target} index : #{index}"
+# => Target 13 index : 3
 
 target = 32
 index = linear_search(target, array)
 
 puts "Target #{target} index : #{index}"
+# => Target 32 index : -1
