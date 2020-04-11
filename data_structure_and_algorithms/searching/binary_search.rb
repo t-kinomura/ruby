@@ -3,21 +3,20 @@
 # otherwise return - 1
 
 def binary_search(target, array)
-
   length = array.length
   center = length / 2
   first = 0
   last = length - 1
 
-  while first < last
+  while first <= last
     if array[center] == target
       return array.index(target)
-    elsif array[center] > target
+    elsif array[center] < target
       first = center + 1
-      center = ( first + last ) / 2
+      center = (first + last) / 2
     else
       last = center - 1
-      center = ( first + last ) / 2
+      center = (first + last) / 2
     end
   end
 
@@ -25,15 +24,15 @@ def binary_search(target, array)
 end
 
 array = [1, 4, 6, 13, 43, 53, 135, 355, 454, 6442]
-target1 = 13
+target1 = 6442
 
 index = binary_search(target1, array)
 
 puts "Target1 #{target1} index : #{index}"
-# => Target 13 index : 3
+# => Index of target1(13) : 3
 
 target2 = 32
 index = binary_search(target2, array)
 
 puts "Target2 #{target2} index : #{index}"
-# => Target 32 index : -1
+# => Index of target2(32) : -1

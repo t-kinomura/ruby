@@ -1,5 +1,5 @@
 # ruby code for jump search x in array[]
-# If x is present then return lis location,
+# If x is present then return its location,
 # otherwise return - 1
 
 def jump_search(target, array)
@@ -36,10 +36,10 @@ target = 13
 index = jump_search(target, array)
 
 puts "Target #{target} index : #{index}"
-# => Target 13 index : 3
+# => Index of target1(13) : 3
 
 target = 32
 index = jump_search(target, array)
 
 puts "Target #{target} index : #{index}"
-# => Target 32 index : -1
+# => Index of target2(32) : -1
